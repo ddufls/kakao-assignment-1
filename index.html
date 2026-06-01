@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="todo-container">
+        <h1 class="app-title">Todo Planner</h1>
+
+        <section class="week-navigation">
+            <button id="previousWeekButton" class="week-button">
+                ◀ 이전 주
+            </button>
+
+            <h2 id="weekRangeText" class="week-range-text"></h2>
+
+            <button id="nextWeekButton" class="week-button">
+                다음 주 ▶
+            </button>
+        </section>
+
+        <section id="weekView" class="week-view"></section>
+
+        <section class="todo-input-section">
+            <input
+                type="text"
+                id="todoInput"
+                class="todo-input"
+                placeholder="할 일을 입력하세요"
+            >
+
+            <button
+                id="addTodoButton"
+                class="add-button"
+            >
+                추가
+            </button>
+        </section>
+
+        <p id="messageText" class="message-text"></p>
+
+        <section class="filter-section">
+            <button
+                class="filter-button active-filter"
+                data-filter="all"
+                id="allFilterButton"
+            >
+                전체 (0)
+            </button>
+
+            <button
+                class="filter-button"
+                data-filter="active"
+                id="activeFilterButton"
+            >
+                진행 중 (0)
+            </button>
+
+            <button
+                class="filter-button"
+                data-filter="completed"
+                id="completedFilterButton"
+            >
+                완료 (0)
+            </button>
+        </section>
+
+        <ul id="todoList" class="todo-list"></ul>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
